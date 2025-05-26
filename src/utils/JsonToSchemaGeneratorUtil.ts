@@ -165,7 +165,8 @@ export class JsonToSchemaGeneratorUtil {
         if (block.items && block.items.length > 0) {
             block.items.forEach((item) => {
                 const [key, value] = Object.entries(item!)[0];
-                properties[key] = { type: this.deriveJsonSchemaType(value) };
+                const derivedType = this.deriveJsonSchemaType(value) || 'string'; // Fallback to 'string' if null
+                properties[key] = { type: derivedType };
             });
         }
 

@@ -58,7 +58,7 @@ export class ObjectGeneratorUtil {
 		// Generate sheet classes for each sheet type
 		sheetSchemas.forEach((sheetSchema) => SheetGeneratorUtil.generate(schema, sheetSchema, sheetsDir, tablesDir, listsDir, classNames));
 
-		    const commonBlocks = new Set<string>();;
+		    const commonBlocks = new Set<string>();
 
 		    sheetSchemas.forEach(sheet => {
 		        const sheetSchema = SchemaRefResolverUtil.resolveIfRef(sheet, schema)!;

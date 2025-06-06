@@ -1,3 +1,3 @@
-export * from './src/commands/index.js';
-export * from './src/beans/index.js';
-export * from './src/utils/index.js';
+export * from './src/commands';
+export * from './src/beans';
+export * from './src/utils';

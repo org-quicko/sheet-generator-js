@@ -4,7 +4,7 @@
 import { Command } from 'commander';
 import * as fs from 'fs';
 import path from 'path';
-import { ObjectGeneratorUtil } from '../utils/ObjectGeneratorUtil.js';
+import { ObjectGeneratorUtil } from '../utils';
 
 // Configure CLI command
 const schemaToObjectProgram = new Command();
@@ -48,7 +48,6 @@ schemaToObjectProgram
 
                 console.log(`TypeScript classes generated successfully for: ${inputFile} in ${path.join(outputDir, relativeOutputPath)}`);
 
-                // eslint-disable-next-line @typescript-eslint/no-explicit-any
               } catch (error: Error | any) { 
                 console.error(`Error during TypeScript class generation for ${inputFile}:`, error.message || error); // more robust error message
                 // Don't exit; continue with other files.

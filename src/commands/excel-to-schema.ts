@@ -3,7 +3,7 @@
 import { Command } from 'commander';
 import * as fs from 'fs';
 import path from 'path';
-import { ExcelToSchemaGeneratorUtil } from '../utils/ExcelToSchemaGeneratorUtil.js';
+import { ExcelToSchemaGeneratorUtil } from '../utils';
 
 // Configure CLI command
 const excelToSchemaProgram = new Command();

@@ -4,7 +4,7 @@
 import { Command } from 'commander';
 import * as fs from 'fs';
 import path from 'path';
-import { JsonToSchemaGeneratorUtil } from '../utils/JsonToSchemaGeneratorUtil.js';
+import { JsonToSchemaGeneratorUtil } from '../utils';
 
 // Configure CLI command
 const jsonToSchemaProgram = new Command();

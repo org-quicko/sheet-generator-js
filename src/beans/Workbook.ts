@@ -1,4 +1,4 @@
-import { Sheet } from './Sheet.js';
+import { Sheet } from './Sheet';
 
 export interface Workbook {
     name: string;

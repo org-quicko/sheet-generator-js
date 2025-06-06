@@ -1,3 +1,3 @@
-export * from './ExcelToSchemaGeneratorUtil.js';
-export * from './JsonToSchemaGeneratorUtil.js';
-export * from './ObjectGeneratorUtil.js';
+export * from "./ExcelToSchemaGeneratorUtil";
+export * from "./JsonToSchemaGeneratorUtil";
+export * from "./ObjectGeneratorUtil";

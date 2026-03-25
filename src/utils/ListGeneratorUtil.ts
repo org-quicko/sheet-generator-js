@@ -37,7 +37,7 @@ export class ListGeneratorUtil {
 			})
 			.join("\n");
 
-		const listClass = `${GeneratorUtil.AUTO_GEN_COMMENT}import { Item, List } from '@org-quicko/sheet';
+		const listClass = `${GeneratorUtil.AUTO_GEN_COMMENT}import { Item, List } from '@org-quicko/sheet';\nimport { JSONArray } from "@org-quicko/core";
 
 @Reflect.metadata('name', '${blockName}')
 export class ${className} extends List {${gettersSetters}

@@ -15,7 +15,7 @@
 		"clean": "npm cache clean --force",
 		"lint": "eslint .",
     	"lint:fix": "eslint . --fix",
-		"prebuild": "rm -rf dist && eslint .",
+		"prebuild": "rm -rf dist && npx eslint .",
 		"build": "rollup -c"
 	},
 	"license": "ISC",

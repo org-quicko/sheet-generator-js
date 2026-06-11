@@ -43,6 +43,7 @@ export class GeneratorUtil {
 	 */
 	public static toKebabCase(str: string): string {
 		return str
+			.replace(/([a-zA-Z])([0-9])/g, "$1-$2") // split between letter and digit (e.g., Us234 -> Us-234)
 			.replace(/([a-z0-9])([A-Z])/g, "$1-$2") // handle camelCase or PascalCase
 			.replace(/_/g, "-") // handle snake_case
 			.toLowerCase();

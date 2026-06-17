@@ -37,8 +37,18 @@ export class ListGeneratorUtil {
 			})
 			.join("\n");
 
-		const listClass = `${GeneratorUtil.AUTO_GEN_COMMENT}import { Item, List } from '@org-quicko/sheet';\nimport { JSONArray } from "@org-quicko/core";
+		let orgQuickoImports: string | undefined;
+		if (gettersSetters.includes("JSONObject")) {
+			orgQuickoImports = `import { JSONObject`;
+		}
+		if (gettersSetters.includes("JSONArray")) {
+			orgQuickoImports = orgQuickoImports ? `${orgQuickoImports}, JSONArray` : `import { JSONArray`;
+		}
+		if (orgQuickoImports) {
+			orgQuickoImports += ` } from "@org-quicko/core";\n`;
+		}
 
+		const listClass = `${GeneratorUtil.AUTO_GEN_COMMENT}import { Item, List } from '@org-quicko/sheet';\n${orgQuickoImports || ""}
 @Reflect.metadata('name', '${blockName}')
 export class ${className} extends List {${gettersSetters}
 }

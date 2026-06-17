@@ -1,6 +1,6 @@
 {
 	"name": "@org-quicko/sheet-generator",
-	"version": "1.0.3-alpha",
+	"version": "1.0.5-alpha",
 	"description": "Utility to generate TypeScript classes and schemas from JSON or Excel files.",
 	"author": "Quicko <developer@quicko.org.in>",
 	"main": "dist/index.cjs",
@@ -15,7 +15,7 @@
 		"clean": "npm cache clean --force",
 		"lint": "eslint .",
     	"lint:fix": "eslint . --fix",
-		"prebuild": "rm -rf dist && npx eslint .",
+		"prebuild": "rm -rf dist &&  eslint .",
 		"build": "rollup -c",
 		"publish-snapshot": "npm --userconfig ~/npmrc/snapshot.npmrc publish --tag snapshot --registry=https://artifacts.quicko.company/repository/npm-snapshots/"
 	},

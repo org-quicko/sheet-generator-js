@@ -15,9 +15,8 @@
 		"clean": "npm cache clean --force",
 		"lint": "eslint .",
     	"lint:fix": "eslint . --fix",
-		"prebuild": "rm -rf dist &&  eslint .",
-		"build": "rollup -c",
-		"publish-snapshot": "npm --userconfig ~/npmrc/snapshot.npmrc publish --tag snapshot --registry=https://artifacts.quicko.company/repository/npm-snapshots/"
+		"prebuild": "rm -rf dist && eslint .",
+		"build": "rollup -c"
 	},
 	"license": "ISC",
 	"files": [

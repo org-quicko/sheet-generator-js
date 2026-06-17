@@ -1,6 +1,6 @@
 {
 	"name": "@org-quicko/sheet-generator",
-	"version": "1.0.5-alpha",
+	"version": "1.0.3",
 	"description": "Utility to generate TypeScript classes and schemas from JSON or Excel files.",
 	"author": "Quicko <developer@quicko.org.in>",
 	"main": "dist/index.cjs",
